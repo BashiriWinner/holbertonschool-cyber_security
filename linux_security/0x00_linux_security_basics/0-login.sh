@@ -1,2 +1,2 @@
 #!/bin/bash
-lastlog -b 5 $1
+sudo last -b 5 $1
