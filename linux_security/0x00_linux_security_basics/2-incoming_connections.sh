@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo ss -t allow ufw 80
+sudo ss -t tcp allow ufw 80
