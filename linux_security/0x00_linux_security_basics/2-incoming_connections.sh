@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo ss ufw -t 80
+sudo ss -t allow ufw 80
