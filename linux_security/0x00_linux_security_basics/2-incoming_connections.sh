@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo ss -t 80
+sudo ss ufw -t 80
