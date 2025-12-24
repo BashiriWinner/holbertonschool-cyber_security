@@ -1,2 +1,2 @@
 #!/bin/bash
-whois !
+whois .Registrant,.Admin, .Tech
