@@ -1,2 +1,2 @@
 #!/bin/bash
-dig +any +noall +stats +trace +answer $1
+dig +any +noall +answer $1
