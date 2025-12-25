@@ -1,2 +1,2 @@
 #!/bin/bash
-nslookup -type=txt holbertonschool.com $1
+nslookup -type=txt $1
