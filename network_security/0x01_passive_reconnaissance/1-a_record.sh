@@ -1,2 +1,2 @@
 #!/bin/bash
-nslookup -type=a holbertonschool.com
+nslookup -type=a holbertonschool.com "$1"
