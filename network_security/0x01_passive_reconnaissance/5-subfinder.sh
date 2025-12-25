@@ -1,2 +1,2 @@
 #!/bin/bash
-subfinder -d holbertonschool.com $1
+subfinder -d $1 -nW -silent -oI -o $1.txt
