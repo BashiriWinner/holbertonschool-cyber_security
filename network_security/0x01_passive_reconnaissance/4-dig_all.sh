@@ -1,2 +1,2 @@
 #!/bin/bash
-dig -noall $1
+dig -any $1
