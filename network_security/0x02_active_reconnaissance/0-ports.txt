@@ -1,2 +1,1 @@
-#!/bin/bash
-nmap -open \n 
+nmap -open  
