@@ -1,0 +1,18 @@
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-01-08 15:37 +04
+Stats: 0:00:02 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 17.16% done; ETC: 15:37 (0:00:10 remaining)
+Stats: 0:00:10 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 20.42% done; ETC: 15:38 (0:00:39 remaining)
+Stats: 0:00:19 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 31.02% done; ETC: 15:38 (0:00:42 remaining)
+Stats: 0:00:19 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 32.01% done; ETC: 15:38 (0:00:40 remaining)
+Nmap scan report for active.hbtn (10.42.114.85)
+Host is up (0.12s latency).
+Not shown: 100 closed udp ports (port-unreach)
+PORT    STATE SERVICE VERSION
+295/udp open  mdns    Lexmark - Holberton Sec Lab - 7cb3b33f70e94206deeddefe17dea662 - printer mdns
+Service Info: Device: printer; CPE: cpe:/h:lexmark:-_holberton_sec_lab_-_7cb3b33f70e94206deeddefe17dea662_-
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 140.19 seconds
