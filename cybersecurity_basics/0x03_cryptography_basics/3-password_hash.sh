@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%s%s" "$1" "$(openssl rand -hex 8)" | openssl dgst -sha512
+echo -n "$1" | openssl dgst -sha512 | awk {'print $1'} > 3_hash.txt
