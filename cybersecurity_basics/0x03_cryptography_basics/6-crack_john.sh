@@ -1,2 +1,2 @@
 #!/bin/bash
-john --format=Raw-SHA256 "$1" --wordlist=/usr/share/wordlists/rockyou.txt && --show --format=Raw-SHA256 "$1" | head -n1 | cut -d: -f2 | tr -d ' '> 6-password.txt
+john --format=Raw-SHA256 "$1" && john --show --format=Raw-SHA256 "$1" | awk -F: 'NR==1 {print $2}' | tr -d '[:space:]' >  6-password.txt
