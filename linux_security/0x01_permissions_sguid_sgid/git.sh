@@ -1,2 +1,2 @@
 #!/bin/bash
-git add . && git commit 'test' && git push 
+git add . && git commit -m 'test' && git push 
