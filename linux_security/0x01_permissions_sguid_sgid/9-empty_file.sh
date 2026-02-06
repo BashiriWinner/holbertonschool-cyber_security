@@ -1,2 +1,2 @@
 #!/bin/bash
-find "$1" -type f -exec chmod {} +
+find "$1" -type f -exec -empty chmod {} +
