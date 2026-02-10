@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo semanage login ipa selinuxusermap-add-user --users=user1 selinux1
+sudo semanage login -a -s user_u "$1"
