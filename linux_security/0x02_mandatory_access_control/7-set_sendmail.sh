@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo setsebool httpd_can_sendmail "$1"
+sudo setsebool -P httpd_can_sendmail on
