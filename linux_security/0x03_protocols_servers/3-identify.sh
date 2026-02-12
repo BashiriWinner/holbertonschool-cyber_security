@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo lynis show packages
+sudo lynis audit system
