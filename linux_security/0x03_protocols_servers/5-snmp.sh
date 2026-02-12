@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo rocommunity public default
+grep public /etc/snmp/snmpd.conf  rocommunity public default
