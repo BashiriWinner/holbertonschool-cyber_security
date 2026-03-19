@@ -1,2 +1,2 @@
 #!/bin/bash
-git add . & git commit -m 'file' && git push 
+git add . && git commit -m 'file' && git push 
