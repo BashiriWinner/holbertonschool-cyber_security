@@ -1,2 +1,2 @@
 #!/bin/bash
-awk '{print $6}' $1 | sort | uniq -c | sort -nr
+awk '{print $6}' auth.log | sort | uniq -c | sort -nr
