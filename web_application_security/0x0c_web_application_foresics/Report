@@ -1,1 +1,69 @@
-REport
+
+**Incident Report – Web Application Forensics**  
+**Project: 0x0C Web Application Forensics**
+
+### 1. Introduction
+Analyzing web application logs is a critical practice that enables security teams to detect attacks in real time, understand attacker behavior, and develop effective defensive strategies. This report summarizes the findings from a recent security incident and proposes concrete mitigation measures to strengthen the system’s security posture.
+
+### 2. Incident Summary (Key Findings & Impact)
+
+**Incident Overview:**
+A brute-force attack was conducted against the SSH service (`sshd`) on the target system. Attackers made thousands of unsuccessful login attempts before successfully compromising the system.
+
+**Key Findings:**
+- **Service Exploited**: SSH (`sshd`)
+- **Compromised Account**: `root`
+- **Number of Distinct Attackers**: 18 unique IP addresses
+- **New User Accounts Created**: Aphelios, Debian-exim, Fido, Jax, Nidalee, Senna, dhg, messagebus, mysql, packet, sshd
+- **Firewall Rules Added**: 6 iptables rules (likely by the attacker to maintain persistence or control)
+- **Operating System**: Ubuntu 2.6.24-26-server (very outdated kernel)
+
+**Impact:**
+- Full system compromise via the root account
+- Multiple backdoor user accounts created
+- Potential data exfiltration, persistence mechanisms, and further lateral movement
+- Significant risk of data breach and unauthorized access
+
+### 3. Implementation Plan (Step-by-step mitigation)
+
+1. **Immediate Containment**
+   - Isolate the affected server from the network
+   - Change all passwords (especially root)
+   - Remove all newly created suspicious user accounts
+
+2. **System Hardening**
+   - Disable direct root login via SSH (`PermitRootLogin no`)
+   - Implement key-based authentication only (`PasswordAuthentication no`)
+   - Update the system and kernel to a supported version
+   - Configure a strong firewall (allow only necessary ports)
+
+3. **Account & Access Control**
+   - Enforce strong password policies
+   - Implement Multi-Factor Authentication (MFA) where possible
+   - Regularly audit user accounts and remove unused ones
+
+4. **Logging & Monitoring**
+   - Enable detailed logging for authentication attempts
+   - Deploy a SIEM or centralized log monitoring solution
+   - Set up real-time alerts for failed login attempts and new user creation
+
+5. **Network Security**
+   - Restrict SSH access to specific IP ranges (whitelisting)
+   - Consider implementing Fail2Ban or similar intrusion prevention tools
+
+### 4. Monitoring Protocol
+
+- **Daily Review**: Check authentication logs (`auth.log`) for unusual login patterns (high number of failed attempts followed by success).
+- **Weekly Audit**: Review newly created users, running processes, and installed packages.
+- **Alerting Rules**:
+  - Alert on more than 50 failed SSH logins from a single IP in 10 minutes
+  - Alert when a new user is added to the system
+  - Alert when root login is attempted
+- **Monthly Assessment**: Evaluate firewall rules, SSH configuration, and patch level.
+- **Retention**: Keep authentication logs for at least 90 days for forensic purposes.
+
+**Conclusion:**
+By implementing the above mitigation measures and maintaining continuous monitoring, the organization can significantly reduce the risk of similar brute-force and unauthorized access incidents in the future.
+
+---
+
