@@ -1,2 +1,2 @@
 #!/bin/bash
-nmap -sC -sV --script vulners $1
+nmap -sC -sV --script=vulscan $1
