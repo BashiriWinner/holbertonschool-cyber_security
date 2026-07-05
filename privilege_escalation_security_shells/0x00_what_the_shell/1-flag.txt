@@ -1,1 +1,1 @@
-CTF{e207cd66cacec018cf12d7cce3439712}
+e207cd66cacec018cf12d7cce3439712
